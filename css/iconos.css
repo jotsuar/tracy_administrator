@@ -1,0 +1,38 @@
+/*!
+*
+* SET DE ICONOS
+*
+*/
+#iconos .forma {
+  display: block;
+  width: 31px;
+  height: 28px;
+  background: url("../img/ico/white32.png") no-repeat 0 0;
+}
+#iconos .izquierda {
+  float: left;
+  clear: none;
+  margin: 0px .5em 0px 0px;
+  padding: 0px;
+}
+#iconos .derecha {
+  float: right;
+  clear: none;
+  margin-left: .5em;
+}
+#iconForm .forma {
+  width: 18px;
+  height: 18px;
+  background: url("../img/ico/sprite.png") 1px center no-repeat;
+}
+#iconForm .izquierda {
+  float: left;
+  clear: none;
+  margin: 0px 0em 0px 0px;
+  padding: 0px;
+}
+#iconForm .derecha {
+  float: right;
+  clear: none;
+  margin-left: .5em;
+}

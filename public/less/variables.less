@@ -1,0 +1,123 @@
+// variables globales
+//-----------------------------
+
+//colors
+//@base-color: 			#407dd7;
+//@base-color: 			#049cdb;
+@base-color: 		#2C83EF;
+@danger-color: 		#d9534f;
+@info-color: 		#5bc0de;
+@success-color: 	#5cb85c;
+@warning-color: 	#f0ad4e;
+
+//Links
+@link-color: 		darken(@base-color, 10%);
+@link-hover-color: 	@link-color;
+
+// Scaffolding
+// -------------------------
+
+@body-bg:               #fff;
+@text-color:            #888;
+
+//Nav
+@navbar-font-color: 	#ffffff;
+@navbar-icon-color: 	#ffffff;
+
+//Header bar
+@header-navbar-font-size: 	2.5em;
+@img-logo-size: 			3.3em;
+@header-navbar-padding:		2em;
+@header-navbar-width:		100%;
+
+//Navbar
+@navbar-width: 			15%;
+@navbar-margin: 		3em;	
+@navbar-li-margin: 		1em;
+@navbar-link-padding: 	2.6em;
+@navbar-li-width: 		12em;
+@navbar-coordinate: 	50px;
+
+// iconografia
+@icon-color: 		@base-color;
+@icon-size: 		20px;
+@icon-font-path: 	"../fonts/";
+@icon-font-name: 	"glyphicons-halflings-regular";
+@icon-margin: 		5px;
+
+
+//Content menu
+@content-menu-width: 	75%;
+@content-li-margin: 	0.2em;
+
+//Content
+@content-margin: 	6.4em;
+@content-width: 	82%;
+
+//Forms
+@input-border-focus: 	#66afe9;
+@form-width: 			50%;
+
+// Form states and alerts
+// -------------------------
+
+@state-success-text:             #468847;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                #3a87ad;
+@state-info-bg:                  #d9edf7;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+
+@state-warning-text:             #c09853;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #b94a48;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+
+// Tables
+// -------------------------
+
+@table-cell-padding:                 8px;
+@table-condensed-cell-padding:       5px;
+
+@table-bg:                           transparent; // overall background-color
+@table-bg-accent:                    #f9f9f9; // for striping
+@table-bg-hover:                     #f5f5f5;
+@table-bg-active:                    @table-bg-hover;
+@table-border-color:                 #ddd; // table and cell border
+
+// Typography
+// -------------------------
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          12px;
+@font-size-large:         ceil(@font-size-base * 1.25); // ~18px
+@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
+
+@font-size-h1:            floor(@font-size-base * 2.60); // ~36px
+@font-size-h2:            floor(@font-size-base * 2.15); // ~30px
+@font-size-h3:            ceil(@font-size-base * 1.70); // ~24px
+@font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
+
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+
+@headings-font-family:    @font-family-base;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+@font-color: 			  #fff;
+
+//Modal
+@modal-background-color: #fff;
+@modal-font-size: 2em;
+@modal-height: 300px;

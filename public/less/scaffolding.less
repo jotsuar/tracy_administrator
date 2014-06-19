@@ -1,0 +1,82 @@
+a {
+	color: @link-color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: @link-hover-color;
+		text-decoration: none;
+	}
+
+	> span.glyphicon{
+		color: @icon-color;
+	}
+
+}
+
+h1,h2 {
+	font-size: 1.5em;
+	line-height: 1em;
+	margin: 0.5em auto 0.5em auto;
+	text-align: center;
+}
+
+ul,
+ol{
+	> li{
+		list-style-type: none;
+	}
+
+	margin: 0px;
+	padding: 0px;
+}
+
+.content{
+	float: left;
+	margin: @content-margin - 1 0 0 (@content-margin + 8);
+	overflow: hidden;
+	width: @content-width;
+	z-index: 1;
+	
+	.volver{
+		margin: 1em 0 0 4em;
+	}
+}
+
+table{
+	color: #000;
+	border:1px solid #424242;
+	margin: 1em auto;
+	width: 95%;
+	th{
+		background-color: @base-color;
+		color: @font-color;
+		padding: 0.5em 0;
+	}
+	tr{
+		&:hover{
+			background-color: #CCC;
+		}
+	}
+	td,th{
+		border:1px solid #424242;
+		text-align: center;
+	}
+
+	.texto{
+		text-align: justify;
+		font-weight: bold;
+		width: 67%;
+	}
+
+	.glyphicon:hover{
+		font-size: @font-size-base * 2.8;
+	}
+
+	.status_active{
+		color: @success-color !important;
+	}
+	.status_inavtive{
+		color: @danger-color !important;
+	}
+}

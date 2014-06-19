@@ -1,0 +1,71 @@
+@dirIcons: "../img/ico/";
+@dirImages: "../img/";
+/*!
+*
+* SET DE ICONOS
+*
+*/
+
+#iconos{
+@icono_ancho:	31px; 
+@icono_alto:	28px;
+	.forma{
+		display: block;
+		width: @icono_ancho;
+		height: @icono_alto;
+		background:url("@{dirIcons}white32.png") no-repeat 0 0; 
+	}
+	
+	.elegir(@x:0, @y:0){ 
+		// Copia la forma basica del icono
+		#iconos .forma; 
+		// calcula la posicion del icono en base a las medidas
+		background-position:-@icono_ancho*@x -@icono_alto*@y; 
+	}
+	
+	.izquierda{
+		float: left;
+		clear: none;
+		margin:0px .5em 0px 0px;
+		padding: 0px;
+	}
+	
+	.derecha{
+		float: right;
+		clear: none;
+		margin-left: .5em;
+	}
+}
+
+#iconForm{
+@icono_ancho:	18px; 
+@icono_alto:	18px;
+	.forma{
+		//display: block;
+		width: @icono_ancho;
+		height: @icono_alto;
+		//margin-top: .3em;
+		background:url("@{dirIcons}sprite.png") 1px center no-repeat; 
+	}
+	
+	.elegir(@x:0, @y:0){ 
+		// Copia la forma basica del icono
+		#iconForm .forma; 
+		// calcula la posicion del icono en base a las medidas
+		background-position:-@icono_ancho*@x -@icono_alto*@y; 
+	}
+	
+	.izquierda{
+		float: left;
+		clear: none;
+		margin:0px 0em 0px 0px;
+		padding: 0px;
+	}
+	
+	.derecha{
+		float: right;
+		clear: none;
+		margin-left: .5em;
+	}
+}
+

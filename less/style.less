@@ -1,0 +1,317 @@
+//Configuracion general
+@maxSize : 100%; 
+
+//Colores
+@baseColor:#407dd7;//Color corporativo(AEREO DESTINOS LTDA)
+@colorFondo:#fff;
+@fontColor:#eaeaea;//Color para las fuentes o letras
+@fontSize: 16px/1.1;
+
+@import "normalize.css";
+@import "iconos.less";
+@import "formulario.less";
+
+.windows_modal(@width:70%)
+{
+	background: #fff;
+	border: 1px solid #aaa #999 #888;
+	border-radius: 5px;
+	box-shadow: 0 3px 14px -4px #000;
+	box-sizing: border-box;
+	display: none;
+	height: auto;
+	left: 50%;
+	max-height: 500px;
+	min-width: 100px;
+	overflow: auto;
+	position: fixed;
+	top: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: @width;
+	z-index: 3;
+	padding: 2em;
+}
+
+.bg_modal(){
+  background: #000;
+  box-sizing: border-box;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.poner_icono(@x:0,@y:0){
+	span{
+		position: relative;
+		top:-6px;
+		left: 40%;
+		#iconForm .elegir(@x,@y); 
+		#iconForm .izquierda;
+	}
+	margin: 0px auto;
+	padding: 1em;
+	text-align: center;
+	width: 60%;
+
+}
+//estilos generales
+body{
+	color: @fontColor;
+	background-color: @colorFondo;
+	font-size: @fontSize;
+	width: @maxSize;
+}
+a{
+	color: @fontColor;
+	display: block;
+	text-decoration: none;
+}
+
+ul{
+	list-style-type: none;
+}
+
+//estilos para la cabecera
+header{
+	background-color: @baseColor;
+	box-shadow: 1px 5px 5px #888;
+	height: auto;
+	overflow: hidden;
+	position: fixed;
+	width: @maxSize;
+	z-index: 1;
+	#logo{
+		a{
+			margin:0px 0px 0px 2em;
+			overflow: hidden;
+			padding: 0.5em 0px;
+			img{
+				width: @maxSize/4;
+			}
+			#slogan{
+				font-size: @fontSize + 20;
+				font-weight: bold;
+			}
+		}
+		width: @maxSize/6;
+	}
+}
+
+//estilos para nav bar
+nav{
+	float: left;
+	margin-left: .5em;
+	overflow: hidden;
+	position: absolute;
+	top:83px;
+	width: @maxSize/4.8;
+	z-index: 0;
+	ul{
+		margin: 0px;
+		padding: 0px 0px 0px 0px;
+		overflow: hidden;
+		width: @maxSize;
+		li{
+			background-color: @baseColor;
+			cursor: pointer;
+			margin: .2em 0px;
+			overflow: hidden;
+			padding: 0px;
+			width: @maxSize/1.4;
+			&:hover{
+				background-color: darken(@baseColor,8%);
+			}
+			a{
+				padding: .5em 1em;
+				margin: 0px auto;
+				overflow: hidden;
+				width: @maxSize;
+				.item{
+					position: relative;
+					top: 5px;
+				}
+			}
+		}
+	}
+
+	.subMenu{
+		li{
+			a{
+				margin-left: 3em;
+				padding: .86em 1em;
+			}
+		}
+	} 
+}
+
+#acerca_de .icon{
+	#iconos .elegir(14.5, 5.8);
+	#iconos .izquierda;
+}
+
+#inicio .icon{
+	#iconos .elegir(0, 5.9);
+	#iconos .izquierda;
+}
+
+#empresa .icon{
+	#iconos .elegir(6.2, 10.4);
+	#iconos .izquierda;
+}
+
+#convenio .icon{
+	#iconos .elegir(14.4, 7);
+	#iconos .izquierda;
+}
+
+#cliente .icon{
+	#iconos .elegir(1, 5.7);
+	#iconos .izquierda;
+}
+
+#empleado .icon{
+	#iconos .elegir(11.3, 8);
+	#iconos .izquierda;
+}
+
+#reserva .icon{
+	#iconos .elegir(8.2, 9.3);
+	#iconos .izquierda;
+}
+
+#paquete .icon{
+	#iconos .elegir(14.4, 8);
+	#iconos .izquierda;
+}
+
+#informe .icon{
+	#iconos .elegir(5.1, 10.4);
+	#iconos .izquierda;
+}
+
+#cuenta .icon{
+	#iconos .elegir(11.3, 9.2);
+	#iconos .izquierda;
+}
+
+#novedad .icon{
+	#iconos .elegir(13.4, 5.8);
+	#iconos .izquierda;
+}
+
+#bakups .icon{
+	#iconos .elegir(2, 7);
+	#iconos .izquierda;
+}
+
+#ayuda .icon{
+	#iconos .elegir(14.5, 1.2);
+	#iconos .izquierda;
+}
+ 
+//Estilos para el area de contenidos
+section.contenido{
+	background-color: @colorFondo;
+	float: left;
+	left: 17%;
+	position: absolute;
+	overflow: hidden;
+	top:83px;
+	width: 82.5%;
+}
+
+//Estilos para el formulario de busqueda
+section>div>div.consulta{
+	form{
+		margin: 3em auto;
+		padding: 0px;
+		overflow: hidden;
+		width: 55%;
+		h2{
+			margin: 0px 0px 1.3em 0px;
+			text-align: center;
+		}
+		button[type="button"]{
+			span{
+				#iconForm .elegir(13.2,5.3); 
+				#iconForm .izquierda;
+			}
+		}
+	}
+
+	table{
+		color: #000;
+		border:1px solid #424242;
+		margin: 3em auto;
+		width: 70%;
+
+		td,th{
+			border:1px solid #424242;
+			text-align: center;
+		}
+
+		.texto{
+			text-align: justify;
+			font-weight: bold;
+			width: 67%;
+		}
+
+		td>a.update{
+			.poner_icono(12,1.3);
+		}
+
+		td>a.consultar{
+			.poner_icono(14.8,1.3);
+		}
+}
+
+	input[type="text"],
+	input[type="search"]{
+		float: left;
+		margin: 0px 1em 0px 1em;
+		padding: .7em .5em;
+	}
+	label{
+		float: left;
+	}
+	div.groupButton{
+		button>span{
+			#iconForm .elegir(2.5,0); 
+			#iconForm .izquierda;
+		}
+		float: left;
+	}
+}
+
+//Definicion de estilos para el menu interno
+section.contenido>div.company_menu{
+	color:#000;
+	margin: 0px auto;
+	overflow: hidden;
+	width:70%;
+	ul{
+		width: 100%;
+	}
+	ul>li{
+		background-color: @baseColor;
+		float: left;
+		margin-right: 1em;
+		a{
+			display: block;
+			padding: 1em;
+			&:hover{
+				background-color: darken(@baseColor,10%);
+			}
+		}
+	}
+}
+
+
+

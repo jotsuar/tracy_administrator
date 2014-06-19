@@ -1,0 +1,94 @@
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+.clearfix(){
+	&:before,
+	&:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+	}
+	&:after {
+	clear: both;
+	}
+}
+
+.no-border-radius {
+	border-radius: 0;
+}
+
+.navbar-link{
+	background-color: @base-color;
+	display: block;
+	overflow: hidden;
+	
+	transition: all 1s ease;
+	&:hover{
+	background-color: darken(@base-color, 27%);
+	}
+}
+
+.button_transition{
+	background-color: @base-color;
+	overflow: hidden;
+	
+	transition: all 1s ease;
+	&:hover{
+	background-color: darken(@base-color, 27%);
+	}
+}
+
+.center-block{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tab-focus() {
+	// Default
+	outline: thin dotted #333;
+	// Webkit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+// Box sizing
+.box-sizing(@boxmodel) {
+	box-sizing: @boxmodel;
+}
+
+// Tables
+// -------------------------
+.table-row-variant(@state; @background; @border) {
+	// Exact selectors below required to override `.table-striped` and prevent
+	// inheritance to nested tables.
+	.table > thead > tr,
+	.table > tbody > tr,
+	.table > tfoot > tr {
+		> td.@{state},
+		> th.@{state},
+		&.@{state} > td,
+		&.@{state} > th {
+			background-color: @background;
+			border-color: @border;
+		}
+	}
+
+	// Hover states for `.table-hover`
+	// Note: this is not available for cells or rows within `thead` or `tfoot`.
+	.table-hover > tbody > tr {
+		> td.@{state}:hover,
+		> th.@{state}:hover,
+		&.@{state}:hover > td,
+		&.@{state}:hover > th {
+			background-color: darken(@background, 5%);
+			border-color: darken(@border, 5%);
+		}
+	}
+}
